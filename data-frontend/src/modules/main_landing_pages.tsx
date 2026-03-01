@@ -832,7 +832,7 @@ export default function LandingPage(): React.JSX.Element {
             </div>
             <div className="hero-seal-status" aria-label="Active applicant status">
               <i className="bi bi-person-check-fill" aria-hidden="true" />
-              <span>Active Applicant</span>
+              <span>1 Active Applicant</span>
             </div>
           </div>
         </div>
