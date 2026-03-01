@@ -980,6 +980,23 @@ body:has(.landing-page)::-webkit-scrollbar {
   font-size: 0.92rem;
 }
 
+.hero-seal-status-copy {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 2px;
+}
+
+.hero-seal-status-copy strong {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.hero-seal-status-copy small {
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+}
+
 .section {
   padding: 110px 20px 80px;
 }
