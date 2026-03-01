@@ -1,0 +1,112 @@
+.admin-sidebar {
+  --admin-primary: #0d9488;
+  --admin-primary-strong: #0f766e;
+  --admin-border: #cde8e5;
+  --admin-text: #123937;
+  width: 270px;
+  flex-shrink: 0;
+  height: 100%;
+  min-height: 0;
+  background: linear-gradient(170deg, #ecfaf8 0%, #f6fcfc 45%, #ffffff 100%);
+  border-right: 1px solid var(--admin-border);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.8);
+}
+
+.admin-sidebar .brand-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 18px 16px;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.admin-sidebar .logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid var(--admin-border);
+}
+
+.admin-sidebar .brand-text h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #0f3b39;
+}
+
+.admin-sidebar .brand-text small {
+  color: #0f766e;
+}
+
+.admin-sidebar .menu {
+  flex: 1;
+  padding: 10px;
+}
+
+.admin-sidebar .item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 12px;
+  color: var(--admin-text);
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  margin-bottom: 6px;
+  transition: all 0.2s ease;
+}
+
+.admin-sidebar .item:hover {
+  background: rgba(13, 148, 136, 0.09);
+  border-color: rgba(13, 148, 136, 0.18);
+}
+
+.admin-sidebar .item.active {
+  background: rgba(13, 148, 136, 0.14);
+  border-color: rgba(13, 148, 136, 0.24);
+  color: var(--admin-primary-strong);
+  font-weight: 600;
+}
+
+.admin-sidebar .admin-box {
+  padding: 14px 16px;
+  border-top: 1px solid var(--admin-border);
+}
+
+.admin-sidebar .admin-info strong {
+  display: block;
+  color: #0f3b39;
+  font-size: 13px;
+  word-break: break-word;
+}
+
+.admin-sidebar .admin-info small {
+  color: #11706a;
+  font-size: 12px;
+}
+
+.admin-sidebar .logout {
+  padding: 13px 16px;
+  border-top: 1px solid var(--admin-border);
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  color: #7f1d1d;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  background: transparent;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.admin-sidebar .logout:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+}

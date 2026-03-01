@@ -1,0 +1,614 @@
+.adm-review-page {
+  min-height: 100vh;
+  padding: 20px;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(34, 197, 94, 0.08), transparent 40%),
+    radial-gradient(circle at 90% 8%, rgba(14, 165, 233, 0.07), transparent 38%),
+    #f8fafc;
+}
+
+.adm-review-toast {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2500;
+  padding: 10px 14px;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+}
+
+.adm-review-toast.success {
+  background: #15803d;
+}
+
+.adm-review-toast.error {
+  background: #b91c1c;
+}
+
+.adm-review-shell {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  border: 1px solid rgba(203, 213, 225, 0.7);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.adm-review-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.adm-review-eyebrow {
+  margin: 0 0 4px;
+  color: #15803d;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.adm-review-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #0f172a;
+}
+
+.adm-review-subtext {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+.adm-review-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.adm-review-count {
+  border: 1px solid #dbe4ee;
+  background: #f8fafc;
+  color: #0f172a;
+  padding: 6px 10px;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.adm-review-link {
+  color: #0f4f25;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.adm-review-link:hover { text-decoration: underline; }
+
+.adm-review-grid {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr) 320px;
+  min-height: 640px;
+}
+
+.adm-review-list-panel {
+  border-right: 1px solid #e2e8f0;
+  background: #fbfdff;
+  display: flex;
+  flex-direction: column;
+}
+
+.adm-review-list-title {
+  padding: 14px 16px 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1e293b;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.adm-review-list {
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+.adm-review-list-item {
+  text-align: left;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.adm-review-list-item:hover {
+  border-color: #bfd2c2;
+  background: #f8fcf9;
+}
+
+.adm-review-list-item.active {
+  border-color: rgba(31, 122, 63, 0.4);
+  background: #f4fbf6;
+}
+
+.adm-review-list-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+.adm-review-list-top strong {
+  color: #0f172a;
+  font-size: 0.84rem;
+}
+
+.adm-review-list-item p {
+  margin: 6px 0 4px;
+  color: #475569;
+  font-size: 0.76rem;
+}
+
+.adm-review-list-item small {
+  color: #64748b;
+  font-size: 0.68rem;
+}
+
+.adm-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 8px;
+  font-size: 0.64rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid transparent;
+}
+
+.adm-status.pending {
+  color: #92400e;
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.adm-status.approved {
+  color: #166534;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.adm-status.rejected {
+  color: #991b1b;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.adm-review-detail-panel {
+  padding: 16px;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  border-right: 1px solid #e2e8f0;
+}
+
+.adm-account-panel {
+  background: #fbfdff;
+  padding: 16px 14px;
+  display: grid;
+  align-content: start;
+}
+
+.adm-account-card {
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.adm-account-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.adm-account-head h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 0.9rem;
+}
+
+.adm-account-fields {
+  display: grid;
+  gap: 8px;
+}
+
+.adm-account-fields > div {
+  border: 1px solid #eef2f7;
+  background: #f8fafc;
+  padding: 8px;
+  display: grid;
+  gap: 3px;
+}
+
+.adm-account-fields span {
+  color: #64748b;
+  font-size: 0.68rem;
+}
+
+.adm-account-fields strong {
+  color: #0f172a;
+  font-size: 0.76rem;
+  word-break: break-word;
+}
+
+.adm-password-hidden {
+  color: #475569;
+  letter-spacing: 0.02em;
+}
+
+.adm-account-note {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+.adm-account-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.adm-btn-neutral {
+  background: #f8fafc;
+  color: #0f172a;
+  border-color: #dbe4ee;
+}
+
+.adm-account-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2600;
+  background: rgba(15, 23, 42, 0.35);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.adm-account-modal {
+  width: min(480px, 100%);
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 14px;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.14);
+  display: grid;
+  gap: 10px;
+}
+
+.adm-account-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.adm-account-modal-head h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 0.95rem;
+}
+
+.adm-account-close {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #64748b;
+  padding: 4px;
+}
+
+.adm-account-close:hover {
+  color: #0f172a;
+}
+
+.adm-account-close:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.adm-account-form {
+  display: grid;
+  gap: 10px;
+}
+
+.adm-account-form label {
+  display: grid;
+  gap: 5px;
+}
+
+.adm-account-form span {
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.adm-account-form input {
+  width: 100%;
+  border: 1px solid #dbe4ee;
+  background: #ffffff;
+  min-height: 38px;
+  padding: 0 10px;
+  font: inherit;
+  font-size: 0.8rem;
+  color: #0f172a;
+}
+
+.adm-account-form input:focus {
+  outline: none;
+  border-color: #93c5aa;
+  box-shadow: 0 0 0 3px rgba(31, 122, 63, 0.08);
+}
+
+.adm-account-form input:disabled {
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.adm-confirm-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2700;
+  background: rgba(15, 23, 42, 0.45);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.adm-confirm-modal {
+  width: min(420px, 100%);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+  padding: 18px 16px 14px;
+  text-align: center;
+}
+
+.adm-confirm-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 10px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+  font-size: 1.25rem;
+}
+
+.adm-confirm-modal h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.02rem;
+}
+
+.adm-confirm-modal p {
+  margin: 8px 0 0;
+  color: #475569;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.adm-confirm-actions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.adm-review-detail-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.adm-review-detail-header h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.05rem;
+}
+
+.adm-review-detail-header p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 0.74rem;
+}
+
+.adm-review-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+}
+
+.adm-review-card {
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 12px;
+}
+
+.adm-review-card h3 {
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: 0.86rem;
+}
+
+.adm-review-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 12px;
+}
+
+.adm-review-fields > div {
+  display: grid;
+  gap: 3px;
+}
+
+.adm-review-fields span {
+  color: #64748b;
+  font-size: 0.68rem;
+}
+
+.adm-review-fields strong {
+  color: #1e293b;
+  font-size: 0.76rem;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.adm-review-image-wrap {
+  border: 1px dashed #cbd5e1;
+  background: #f8fafc;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.adm-review-image-wrap img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  display: block;
+}
+
+.adm-review-image-note {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+.adm-review-actions-card textarea {
+  width: 100%;
+  border: 1px solid #dbe4ee;
+  background: #ffffff;
+  padding: 10px;
+  resize: vertical;
+  min-height: 78px;
+  font: inherit;
+  font-size: 0.78rem;
+  color: #0f172a;
+}
+
+.adm-review-actions-card textarea:focus {
+  outline: none;
+  border-color: #93c5aa;
+  box-shadow: 0 0 0 3px rgba(31, 122, 63, 0.08);
+}
+
+.adm-review-notes-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #334155;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.adm-review-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.adm-btn {
+  border: 1px solid transparent;
+  min-height: 38px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.adm-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.adm-btn-reject {
+  background: #fef2f2;
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+.adm-btn-approve {
+  background: linear-gradient(135deg, #0f4f25 0%, #1f7a3f 100%);
+  color: #ffffff;
+}
+
+.adm-review-empty {
+  border: 1px dashed #cbd5e1;
+  color: #64748b;
+  font-size: 0.86rem;
+  padding: 24px;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .adm-review-page {
+    padding: 10px;
+  }
+
+  .adm-review-header {
+    flex-direction: column;
+  }
+
+  .adm-review-header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .adm-review-grid {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .adm-review-list-panel {
+    border-right: 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .adm-review-detail-panel {
+    border-right: 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .adm-account-panel {
+    padding: 12px;
+  }
+
+  .adm-review-list {
+    max-height: 220px;
+  }
+
+  .adm-review-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adm-review-fields {
+    grid-template-columns: 1fr;
+  }
+}

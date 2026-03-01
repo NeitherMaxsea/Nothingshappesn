@@ -1,0 +1,180 @@
+.admin-job-list-page {
+  background: #fff;
+  border: 1px solid #d8ece9;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.job-list-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.job-list-head h2 {
+  margin: 0;
+  color: #134e4a;
+}
+
+.job-list-head button {
+  border: 1px solid #b9d9d4;
+  background: #f5fbfa;
+  color: #0f766e;
+  border-radius: 10px;
+  min-height: 38px;
+  padding: 0 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.job-list-empty {
+  margin: 0;
+  color: #64748b;
+}
+
+.job-list-table-wrap {
+  overflow: auto;
+}
+
+.job-list-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.job-list-table th,
+.job-list-table td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #e7efee;
+  font-size: 13px;
+}
+
+.status-pill {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status-pill.open {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-pill.closed {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-pill.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.job-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.job-actions button {
+  border: 0;
+  border-radius: 8px;
+  min-height: 30px;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.job-actions .edit {
+  background: #e0f2fe;
+  color: #075985;
+}
+
+.job-actions .delete {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.job-edit-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.42);
+  display: grid;
+  place-items: center;
+  z-index: 1200;
+  padding: 16px;
+}
+
+.job-edit-modal {
+  width: min(840px, 100%);
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #d8ece9;
+  padding: 16px;
+}
+
+.job-edit-modal h3 {
+  margin: 0 0 12px;
+  color: #134e4a;
+}
+
+.job-edit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.job-edit-grid label {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #134e4a;
+}
+
+.job-edit-grid input,
+.job-edit-grid select {
+  min-height: 38px;
+  border: 1px solid #cfe4e1;
+  border-radius: 9px;
+  background: #f8fcfb;
+  padding: 0 10px;
+  outline: none;
+}
+
+.job-edit-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.job-edit-actions button {
+  border: 0;
+  border-radius: 9px;
+  min-height: 38px;
+  padding: 0 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.job-edit-actions .cancel {
+  background: #e2e8f0;
+  color: #1f2937;
+}
+
+.job-edit-actions .save {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  color: #fff;
+}
+
+@media (max-width: 840px) {
+  .job-edit-grid {
+    grid-template-columns: 1fr;
+  }
+}
