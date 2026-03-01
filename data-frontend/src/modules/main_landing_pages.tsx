@@ -830,6 +830,10 @@ export default function LandingPage(): React.JSX.Element {
                 <img className="hero-seal-img hero-seal-img-main" src={heroSealLogo} alt="HireAble Proximity Development logo" />
               </div>
             </div>
+            <div className="hero-seal-status" aria-label="Active applicant status">
+              <i className="bi bi-person-check-fill" aria-hidden="true" />
+              <span>Active Applicant</span>
+            </div>
           </div>
         </div>
       </section>

@@ -896,6 +896,9 @@ body:has(.landing-page)::-webkit-scrollbar {
 
 .hero-logo-wrap {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   justify-content: center;
   position: relative;
 }
@@ -954,6 +957,27 @@ body:has(.landing-page)::-webkit-scrollbar {
 .hero-seal:hover .hero-seal-img-main {
   transform: translateY(-2px) scale(1.015);
   filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.26));
+}
+
+.hero-seal-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(10, 59, 30, 0.78);
+  border: 1px solid rgba(134, 239, 172, 0.45);
+  color: #dcfce7;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+}
+
+.hero-seal-status i {
+  color: #86efac;
+  font-size: 0.92rem;
 }
 
 .section {
